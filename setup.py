@@ -1,15 +1,17 @@
 from func import getAllPhpFiles, findInString, writeFound
-from conf import FILENAMERESULT, PATH
+from conf import RESULT, ERROR, PATH
+
+print("Carregando lista de arquivos, aguarde...")
 
 files = getAllPhpFiles()
-fileResult = open(FILENAMERESULT, "a+")
+fileError = open(ERROR, "w+")
+fileResult = open(RESULT, "w+")
 fileResult.write("[")
 
 lineCount = 1
-
+print("[X] Varrendo arquivos, aguarde...")
 for fileName in files:
     file = open(PATH + fileName, "r")
-    print(PATH + fileName)
     try:
         for line in file:
             if findInString(line) != False:
@@ -18,7 +20,10 @@ for fileName in files:
                 fileResult.write(content)
             lineCount += 1
     except:
-        print("Erro on file: " + fileName)
+        pass
 
 
 fileResult.write("]")
+
+print("[X] Terminado\n  -> Resultado da busca: ./" +
+      RESULT + "\n  -> Log de erros: ./" + ERROR)
