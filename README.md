@@ -9,6 +9,6 @@ No arquivo [conf.py] você pode alterar o:<br/><br/>
 
 ### Instruções
 
--> Crie uma pasta chamada "files" ou com qualquer outro nome, desde que você atualize o PATH no arquivo [conf.py].
--> Coloque os seus arquivos (de preferência soltos no diretório) na pasta [files].
--> Execute o arquivo [setup.py]
+-> Crie uma pasta chamada "files" ou com qualquer outro nome, desde que você atualize o PATH no arquivo [conf.py]<br/>
+-> Coloque os seus arquivos (de preferência soltos no diretório) na pasta [files].<br/>
+-> Execute o arquivo [setup.py]<br/>
